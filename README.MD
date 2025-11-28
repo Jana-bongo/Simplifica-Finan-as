@@ -519,9 +519,8 @@ Este projeto foi desenvolvido para fins acadêmicos na disciplina de Gestão e Q
 
 ## 📞 Contato
 
-- 📧 **Email:** [Inserir email da equipe]
+- 📧 **Email:** [Janary009@gmail.com]
 - 🐙 **GitHub:** [@Jana-bongo](https://github.com/Jana-bongo)
-- 🔗 **LinkedIn:** [Inserir perfis se houver]
 
 ---
 
