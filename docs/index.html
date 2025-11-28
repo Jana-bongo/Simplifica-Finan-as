@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sistema de Gestão Financeira Pessoal - Simples, prático e sem complicação">
+    <title>Simplifica Finanças - Gestão Financeira Pessoal</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #6366F1;
+            --primary-dark: #4F46E5;
+            --secondary: #8B5CF6;
+            --success: #10B981;
+            --danger: #EF4444;
+            --dark: #1F2937;
+            --light: #F9FAFB;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            animation: fadeInDown 1s;
+        }
+
+        header p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .badges {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+
+        .badge {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .btn {
+            padding: 15px 40px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--primary);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--primary);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 20px;
+        }
+
+        section h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 50px;
+            color: var(--primary);
+        }
+
+        /* Features */
+        .features {
+            background: white;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .feature-icon {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+        }
+
+        .feature-item h4 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        /* Screenshots */
+        .screenshots {
+            background: var(--light);
+        }
+
+        .link-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+            transition: all 0.3s;
+            margin-top: 20px;
+        }
+
+        .link-button:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+        }
+
+        /* Videos */
+        .videos {
+            background: white;
+        }
+
+        /* Tests */
+        .tests {
+            background: var(--light);
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Team */
+        .team {
+            background: white;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .team-member {
+            text-align: center;
+            padding: 20px;
+            background: var(--light);
+            border-radius: 15px;
+        }
+
+        .team-avatar {
+            width: 120px;
+            height: 120px;
+            background: var(--primary);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+        }
+
+        .team-name {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: var(--primary);
+        }
+
+        .team-role {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* Tech */
+        .tech {
+            background: var(--light);
+        }
+
+        .tech-stack {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .tech-item {
+            text-align: center;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            min-width: 150px;
+            transition: transform 0.3s;
+        }
+
+        .tech-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .tech-icon {
+            font-size: 4rem;
+            margin-bottom: 10px;
+        }
+
+        .tech-name {
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        footer a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Animações */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            header p {
+                font-size: 1.2rem;
+            }
+
+            section h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>💰 Simplifica Finanças</h1>
+        <p>Gestão Financeira Pessoal Simples e Descomplicada</p>
+        
+        <div class="badges">
+            <span class="badge">✅ 15 Testes Automatizados</span>
+            <span class="badge">📊 85% Cobertura</span>
+            <span class="badge">🐍 Python + Flask</span>
+            <span class="badge">🗄️ MySQL</span>
+        </div>
+
+        <div class="cta-buttons">
+            <a href="https://github.com/Jana-bongo/Simplifica-Finan-as" class="btn btn-primary" target="_blank">
+                🔗 Ver no GitHub
+            </a>
+            <a href="https://drive.google.com/drive/folders/1HtkiF-c2yeAppkmOtABNJ-BBmmPhVF6T" class="btn btn-secondary" target="_blank">
+                🎥 Assistir Demonstração
+            </a>
+        </div>
+    </header>
+
+    <!-- Features -->
+    <section class="features">
+        <div class="container">
+            <h2>✨ Funcionalidades</h2>
+            
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">🔐</div>
+                    <h4>Autenticação Segura</h4>
+                    <p>Login protegido com senhas criptografadas</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">💸</div>
+                    <h4>Transações Rápidas</h4>
+                    <p>Registre receitas e despesas em segundos</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📊</div>
+                    <h4>Dashboard Inteligente</h4>
+                    <p>Veja saldo, resumo mensal e histórico</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🎯</div>
+                    <h4>Metas Financeiras</h4>
+                    <p>Crie objetivos e acompanhe progresso</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📈</div>
+                    <h4>Relatórios</h4>
+                    <p>Gráficos e análises (modo avançado)</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📥</div>
+                    <h4>Exportação</h4>
+                    <p>Download em Excel e PDF</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots -->
+    <section class="screenshots">
+        <div class="container">
+            <h2>📸 Capturas de Tela</h2>
+            
+            <p style="text-align: center; font-size: 1.2rem; max-width: 800px; margin: 0 auto;">
+                Veja a interface completa do sistema com todas as telas e funcionalidades.
+            </p>
+
+            <div style="text-align: center;">
+                <a href="https://drive.google.com/drive/folders/1NfiauL8_0sB11r2Yt6rrVle8WJAxLFPK?usp=drive_link" 
+                   class="link-button" 
+                   target="_blank">
+                    📸 Ver Todas as Imagens no Google Drive
+                </a>
+            </div>
+
+            <div style="margin-top: 40px; text-align: center; color: #666;">
+                <p><strong>Principais telas incluídas:</strong></p>
+                <p>🔐 Login • 📊 Dashboard Simples • 📈 Dashboard Avançado • 🎯 Metas • 💸 Transações • 📊 Relatórios</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vídeos -->
+    <section class="videos">
+        <div class="container">
+            <h2>🎥 Vídeos Demonstrativos</h2>
+            
+            <p style="text-align: center; font-size: 1.2rem; max-width: 800px; margin: 0 auto;">
+                Assista aos vídeos completos mostrando todas as funcionalidades do sistema.
+            </p>
+
+            <div style="text-align: center;">
+                <a href="https://drive.google.com/drive/folders/1HtkiF-c2yeAppkmOtABNJ-BBmmPhVF6T?usp=drive_link" 
+                   class="link-button" 
+                   target="_blank">
+                    🎥 Assistir Vídeos Completos no Google Drive
+                </a>
+            </div>
+
+            <div style="margin-top: 40px; text-align: center; color: #666;">
+                <p><strong>Vídeos disponíveis:</strong></p>
+                <p>🎬 Pitch do Projeto (5 min) • 🎬 Demonstração Completa • 🧪 Execução dos Testes • 🎯 Tutorial de Uso</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testes e Qualidade -->
+    <section class="tests">
+        <div class="container">
+            <h2>🧪 Testes e Qualidade</h2>
+            
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="stat-number">15</div>
+                    <div class="stat-label">Testes Automatizados</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Taxa de Sucesso</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">~85%</div>
+                    <div class="stat-label">Cobertura de Código</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">27</div>
+                    <div class="stat-label">Pontos de Função</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">1.900+</div>
+                    <div class="stat-label">Linhas de Código</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">0</div>
+                    <div class="stat-label">Bugs Críticos</div>
+                </div>
+            </div>
+
+            <p style="text-align: center; margin-top: 40px; font-size: 1.2rem;">
+                ✅ Testes Unitários • ✅ Testes de Integração • ✅ Testes Funcionais
+            </p>
+        </div>
+    </section>
+
+    <!-- Tecnologias -->
+    <section class="tech">
+        <div class="container">
+            <h2>🛠️ Tecnologias</h2>
+            
+            <div class="tech-stack">
+                <div class="tech-item">
+                    <div class="tech-icon">🐍</div>
+                    <div class="tech-name">Python 3.10+</div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">🌶️</div>
+                    <div class="tech-name">Flask 3.0</div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">🗄️</div>
+                    <div class="tech-name">MySQL 8.0</div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">🎨</div>
+                    <div class="tech-name">Bootstrap 5</div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">🧪</div>
+                    <div class="tech-name">unittest</div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">📊</div>
+                    <div class="tech-name">Coverage.py</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipe -->
+    <section class="team">
+        <div class="container">
+            <h2>👥 Equipe</h2>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="team-avatar">👤</div>
+                    <div class="team-name">Janary Victor do Nascimento Júnior</div>
+                    <div class="team-role">Desenvolvedor Full-Stack</div>
+                    <p style="margin-top: 10px; color: #999;">RA: 1362416604</p>
+                </div>
+                <div class="team-member">
+                    <div class="team-avatar">👤</div>
+                    <div class="team-name">José Kleivson da Silva Freitas</div>
+                    <div class="team-role">Banco de Dados / Backend</div>
+                    <p style="margin-top: 10px; color: #999;">RA: 1362411072</p>
+                </div>
+                <div class="team-member">
+                    <div class="team-avatar">👤</div>
+                    <div class="team-name">Daniel Obede da Silva</div>
+                    <div class="team-role">Frontend / Testes</div>
+                    <p style="margin-top: 10px; color: #999;">RA: 1362112473</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px; color: #666;">
+                <p><strong>Orientador:</strong> Prof. Welber Macedo</p>
+                <p><strong>Instituição:</strong> FPB - Faculdade Internacional da Paraíba (Campus Tambiá)</p>
+                <p><strong>Curso:</strong> Análise e Desenvolvimento de Sistemas</p>
+                <p><strong>Disciplina:</strong> Gestão e Qualidade de Software (A3)</p>
+                <p><strong>Semestre:</strong> 2025.2</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p><strong>Simplifica Finanças</strong> - Sistema de Gestão Financeira Pessoal</p>
+            <p style="margin: 20px 0;">
+                Projeto A3 - Gestão e Qualidade de Software • 2025.2
+            </p>
+            <p>
+                <a href="https://github.com/Jana-bongo/Simplifica-Finan-as" target="_blank">GitHub</a> •
+                <a href="https://drive.google.com/drive/folders/1NfiauL8_0sB11r2Yt6rrVle8WJAxLFPK" target="_blank">Screenshots</a> •
+                <a href="https://drive.google.com/drive/folders/1HtkiF-c2yeAppkmOtABNJ-BBmmPhVF6T" target="_blank">Vídeos</a>
+            </p>
+            <p style="margin-top: 20px; opacity: 0.7;">
+                Desenvolvido com ❤️ para a disciplina de Gestão e Qualidade de Software
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
