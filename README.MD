@@ -413,12 +413,12 @@ pylint app.py
 
 ## 👥 Autores
 
-**Janary Victor do Nascimento Júnior**  
-- Ra: 1362416604
-**José Kleivson da Silva Freitas**  
-- Ra: 1362411072
-**Daniel Obede da Silva**  
-- Ra: 1362112473
+| Nome                               | RA          |
+|------------------------------------|-------------|
+| Janary Victor do Nascimento Júnior | 1362416604  |
+| José Kleivson da Silva Freitas     | 1362411072  |
+| Daniel Obede da Silva              | 1362112473  |
+
 
 
 **Orientador:** Prof. Welber Macedo  
