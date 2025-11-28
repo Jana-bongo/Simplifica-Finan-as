@@ -9,7 +9,7 @@
 > Sistema web de controle financeiro pessoal com interface adaptativa (simples/avançada), desenvolvido como projeto A3 de Gestão e Qualidade de Software.
 
 **🌐 Landing Page:** [https://seu-usuario.github.io/gestao-financeira](https://seu-usuario.github.io/gestao-financeira)  
-**📹 Demo:** [Link para vídeo demonstrativo](#)
+**📹 Demo:** [https://drive.google.com/drive/folders/1HtkiF-c2yeAppkmOtABNJ-BBmmPhVF6T?usp=drive_link](#)
 
 ---
 
