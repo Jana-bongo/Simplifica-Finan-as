@@ -3,29 +3,37 @@
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue)](https://www.python.org/)
 [![Flask](https://img.shields.io/badge/flask-3.0-green)](https://flask.palletsprojects.com/)
 [![MySQL](https://img.shields.io/badge/mysql-8.0-orange)](https://www.mysql.com/)
-[![License](https://img.shields.io/badge/license-MIT-brightgreen)](LICENSE)
 [![Tests](https://img.shields.io/badge/tests-15%20passing-success)](tests/)
+[![Coverage](https://img.shields.io/badge/coverage-85%25-brightgreen)](tests/)
 
 > Sistema web de controle financeiro pessoal com interface adaptativa (simples/avançada), desenvolvido como projeto A3 de Gestão e Qualidade de Software.
 
-**🌐 Landing Page:** [https://seu-usuario.github.io/gestao-financeira](https://seu-usuario.github.io/gestao-financeira)  
-**📹 Demo:** [https://drive.google.com/drive/folders/1HtkiF-c2yeAppkmOtABNJ-BBmmPhVF6T?usp=drive_link](#)
+---
+
+## 🔗 Links Importantes
+
+- 🌐 **Landing Page:** [Jana-bongo.github.io/Simplifica-Finan-as](https://Jana-bongo.github.io/Simplifica-Finan-as)
+- 📁 **Repositório:** [github.com/Jana-bongo/Simplifica-Finan-as](https://github.com/Jana-bongo/Simplifica-Finan-as)
+- 📸 **Screenshots:** [Google Drive - Imagens](https://drive.google.com/drive/folders/1NfiauL8_0sB11r2Yt6rrVle8WJAxLFPK?usp=drive_link)
+- 🎥 **Vídeos Demonstrativos:** [Google Drive - Vídeos](https://drive.google.com/drive/folders/1HtkiF-c2yeAppkmOtABNJ-BBmmPhVF6T?usp=drive_link)
 
 ---
 
 ## 📑 Índice
 
-- [Sobre o Projeto](#sobre-o-projeto)
-- [Funcionalidades](#funcionalidades)
-- [Tecnologias](#tecnologias)
-- [Arquitetura](#arquitetura)
-- [Instalação](#instalação)
-- [Uso](#uso)
-- [Testes](#testes)
-- [Qualidade de Código](#qualidade-de-código)
-- [Roadmap](#roadmap)
-- [Autores](#autores)
-- [Licença](#licença)
+- [Sobre o Projeto](#-sobre-o-projeto)
+- [Funcionalidades](#-funcionalidades)
+- [Tecnologias](#️-tecnologias)
+- [Arquitetura](#️-arquitetura)
+- [Instalação](#-instalação)
+- [Uso](#-uso)
+- [Testes](#-testes)
+- [Capturas de Tela](#-capturas-de-tela)
+- [Vídeos Demonstrativos](#-vídeos-demonstrativos)
+- [Qualidade de Código](#-qualidade-de-código)
+- [Roadmap](#️-roadmap)
+- [Equipe](#-equipe)
+- [Licença](#-licença)
 
 ---
 
@@ -34,99 +42,122 @@
 O **Simplifica Finanças** é um sistema web desenvolvido para facilitar o controle financeiro pessoal, atendendo tanto usuários iniciantes quanto avançados através de interfaces adaptativas.
 
 ### Problema Identificado
-- 47% dos brasileiros não controlam suas finanças (SPC Brasil, 2024)
-- Ferramentas existentes são complexas demais ou muito simplistas
-- Falta de acessibilidade para diferentes perfis de usuários
+
+- Aplicativos financeiros são **complexos demais** para usuários iniciantes
+- Exigem cadastro de banco, sincronização e configurações complicadas
+- Interface única não atende diferentes perfis de usuários
+- Falta de simplicidade no registro de transações
 
 ### Solução Proposta
+
 Sistema com **dois modos de interface**:
-- **Modo Simples:** Para idosos, aposentados e iniciantes em tecnologia
-- **Modo Avançado:** Para empreendedores e usuários com conhecimento técnico
+
+#### 🟢 Modo Simples
+- Para idosos, aposentados e iniciantes em tecnologia
+- Botões grandes e coloridos
+- Interface limpa com apenas o essencial
+- Ideal para uso diário rápido
+
+#### 🔵 Modo Avançado
+- Para empreendedores e usuários experientes
+- Gráficos e relatórios detalhados
+- Análise de tendências
+- Exportação de dados
 
 ### Diferenciais
-✅ Interface adaptativa sem perda de funcionalidades  
-✅ Design responsivo para desktop e mobile  
-✅ Exportação em Excel e PDF  
-✅ Sistema de metas financeiras com gamificação  
-✅ 100% gratuito e open-source  
+
+✅ **Sem complicação:** Não precisa cadastrar banco ou conta  
+✅ **Interface adaptativa** sem perda de funcionalidades  
+✅ **Design responsivo** para desktop e mobile  
+✅ **Exportação** em Excel e PDF  
+✅ **Sistema de metas** com feedback visual  
+✅ **100% gratuito** e open-source  
 
 ---
 
 ## ⚡ Funcionalidades
 
-### Gerenciamento de Transações
+### 💸 Gerenciamento de Transações
 - ✏️ Cadastro de receitas e despesas
 - 📊 Categorização automática
 - 🗑️ Exclusão com confirmação
 - 📅 Filtro por período
+- 💰 Cálculo automático de saldo
 
-### Sistema de Metas
+### 🎯 Sistema de Metas
 - 🎯 Criação de metas financeiras
-- 📈 Acompanhamento de progresso
+- 📈 Acompanhamento de progresso visual
 - 🎨 Personalização de cores
 - 🏆 Notificações de conquista
+- ⏰ Alertas de prazo próximo
 
-### Relatórios (Modo Avançado)
+### 📊 Relatórios (Modo Avançado)
 - 📉 Gráficos de pizza (despesas por categoria)
 - 📊 Gráfico de evolução mensal
 - 💡 Insights automáticos
-- 🔍 Análise de tendências
+- 📝 Análise de tendências
 
-### Exportação de Dados
+### 📥 Exportação de Dados
 - 📗 Exportação em Excel (.xlsx)
 - 📕 Exportação em PDF
 - 📋 Relatórios personalizados
+- 💾 Backup completo dos dados
 
-### Segurança
+### 🔒 Segurança
 - 🔐 Autenticação com hash de senha (Werkzeug)
 - 🛡️ Proteção CSRF
 - 🚪 Sessões seguras
 - ✅ Validação de dados server-side
+- 🔑 Criptografia de senhas
 
 ---
 
 ## 🛠️ Tecnologias
 
 ### Backend
-- **Python 3.8+** - Linguagem principal
-- **Flask 3.0** - Framework web
+- **Python 3.10+** - Linguagem principal
+- **Flask 3.0** - Framework web minimalista
 - **MySQL 8.0** - Banco de dados relacional
-- **Werkzeug** - Hashing de senhas
+- **Werkzeug 3.0.1** - Hashing de senhas
+- **python-dotenv 1.0.0** - Gestão de variáveis de ambiente
 
 ### Frontend
 - **HTML5/CSS3** - Estrutura e estilo
-- **Bootstrap 5.3** - Framework CSS
+- **Bootstrap 5** - Framework CSS responsivo
 - **JavaScript (Vanilla)** - Interatividade
-- **Chart.js 4.4** - Gráficos interativos
+- **Font Awesome** - Ícones
 
 ### Bibliotecas Python
 ```txt
 Flask==3.0.0
 mysql-connector-python==8.2.0
+Werkzeug==3.0.1
 python-dotenv==1.0.0
-pandas==2.1.0
+pandas==2.1.4
 openpyxl==3.1.2
 fpdf==1.7.2
+gunicorn==21.2.0
 ```
 
 ### Ferramentas de Desenvolvimento
 - **Git** - Controle de versão
-- **pytest** - Framework de testes
-- **GitHub Actions** - CI/CD
+- **unittest** - Framework de testes
+- **Coverage.py** - Cobertura de testes
 - **GitHub Pages** - Hospedagem da landing page
 
 ---
 
-## 🏗️ Arquitetura
+## 🗂️ Arquitetura
 
 ### Estrutura do Projeto
 ```
-gestao-financeira/
+Simplifica-Finan-as/
 │
 ├── app.py                      # Aplicação Flask principal
-├── database.sql                # Script de criação do banco
+├── database_schema.sql         # Script de criação do banco
 ├── requirements.txt            # Dependências Python
 ├── .env.example               # Exemplo de variáveis de ambiente
+├── .gitignore                 # Arquivos ignorados
 │
 ├── templates/                  # Templates HTML
 │   ├── base.html              # Template base
@@ -137,70 +168,50 @@ gestao-financeira/
 │   ├── dashboard_avancado.html# Dashboard modo avançado
 │   ├── metas_simples.html     # Metas modo simples
 │   ├── metas_avancado.html    # Metas modo avançado
+│   ├── configuracoes.html     # Configurações
 │   └── relatorios.html        # Relatórios
 │
 ├── tests/                      # Testes automatizados
 │   ├── __init__.py
 │   └── test_app.py            # 15 testes (unitários + integração)
 │
-├── docs/                       # Documentação
-│   ├── INSTALACAO.md          # Guia de instalação
-│   ├── ARQUITETURA.md         # Documentação técnica
-│   └── API.md                 # Documentação de rotas
-│
-└── .github/
-    └── workflows/
-        └── tests.yml          # Pipeline CI/CD
+└── docs/                       # Documentação
+    └── index.html             # Landing page (GitHub Pages)
 ```
 
 ### Diagrama de Arquitetura
 
 ```
-┌─────────────────────────────────────────────────────┐
-│                   FRONTEND                          │
-│  ┌──────────────┐  ┌──────────────┐                │
-│  │ Modo Simples │  │ Modo Avançado│                │
-│  └──────┬───────┘  └──────┬───────┘                │
-│         │                  │                         │
-│         └──────────┬───────┘                         │
-└────────────────────┼─────────────────────────────────┘
+┌────────────────────────────────────────────────┐
+│                   FRONTEND                     │
+│  ┌──────────────┐  ┌──────────────┐           │
+│  │ Modo Simples │  │ Modo Avançado│           │
+│  └──────┬───────┘  └──────┬───────┘           │
+│         │                  │                   │
+│         └──────────┬───────┘                   │
+└────────────────────┼───────────────────────────┘
                      │
                      ▼
-┌─────────────────────────────────────────────────────┐
-│                  FLASK APP                          │
-│  ┌────────────────────────────────────────────┐    │
-│  │          Rotas & Controllers               │    │
-│  │  /login  /dashboard  /metas  /relatorios  │    │
-│  └────────────────┬───────────────────────────┘    │
-│                   │                                 │
-│  ┌────────────────▼───────────────────────────┐    │
-│  │        Lógica de Negócio                   │    │
-│  │  • Autenticação  • Transações  • Metas     │    │
-│  └────────────────┬───────────────────────────┘    │
-└───────────────────┼─────────────────────────────────┘
+┌────────────────────────────────────────────────┐
+│                  FLASK APP                     │
+│  ┌──────────────────────────────────────────┐ │
+│  │          Rotas & Controllers             │ │
+│  │  /login  /dashboard  /metas  /relatorios │ │
+│  └────────────────┬─────────────────────────┘ │
+│                   │                            │
+│  ┌────────────────▼─────────────────────────┐ │
+│  │        Lógica de Negócio                 │ │
+│  │  • Autenticação  • Transações  • Metas   │ │
+│  └────────────────┬─────────────────────────┘ │
+└───────────────────┼────────────────────────────┘
                     │
                     ▼
-┌─────────────────────────────────────────────────────┐
-│                MySQL Database                       │
-│  ┌─────────┐  ┌──────────┐  ┌────────┐            │
-│  │usuarios │  │transacoes│  │ metas  │            │
-│  └─────────┘  └──────────┘  └────────┘            │
-└─────────────────────────────────────────────────────┘
-```
-
-### Modelo de Dados (ER)
-
-```sql
-usuarios                transacoes               metas
-┌─────────────┐        ┌──────────────┐         ┌─────────────┐
-│ id (PK)     │───┐    │ id (PK)      │    ┌───│ id (PK)     │
-│ nome        │   │    │ usuario_id   │◄───┘   │ usuario_id  │
-│ email       │   └───►│ tipo         │        │ titulo      │
-│ senha       │        │ valor        │        │ valor_alvo  │
-│ modo        │        │ descricao    │        │ valor_atual │
-│ criado_em   │        │ categoria    │        │ status      │
-└─────────────┘        │ data         │        │ cor         │
-                       └──────────────┘        └─────────────┘
+┌────────────────────────────────────────────────┐
+│                MySQL Database                  │
+│  ┌─────────┐  ┌──────────┐  ┌────────┐       │
+│  │usuarios │  │transacoes│  │ metas  │       │
+│  └─────────┘  └──────────┘  └────────┘       │
+└────────────────────────────────────────────────┘
 ```
 
 ---
@@ -208,14 +219,14 @@ usuarios                transacoes               metas
 ## 🚀 Instalação
 
 ### Pré-requisitos
-- Python 3.8 ou superior
+- Python 3.10 ou superior
 - MySQL 8.0 ou superior
 - Git
 
 ### Passo 1: Clone o Repositório
 ```bash
-git clone https://github.com/seu-usuario/gestao-financeira.git
-cd gestao-financeira
+git clone https://github.com/Jana-bongo/Simplifica-Finan-as.git
+cd Simplifica-Finan-as
 ```
 
 ### Passo 2: Crie Ambiente Virtual
@@ -240,20 +251,26 @@ pip install -r requirements.txt
 mysql -u root -p
 
 # Execute o script
-source database.sql
+source database_schema.sql
 ```
 
 ### Passo 5: Configure Variáveis de Ambiente
-```bash
-# Copie o arquivo de exemplo
-cp .env.example .env
 
-# Edite com suas configurações
-# DB_HOST=localhost
-# DB_USER=root
-# DB_PASSWORD=sua_senha
-# DB_NAME=gestao_financeira
-# SECRET_KEY=sua_chave_secreta
+Crie um arquivo `.env` na raiz do projeto:
+
+```env
+# Chave secreta da aplicação
+SECRET_KEY=sua_chave_secreta_aqui
+
+# Configurações do Banco de Dados MySQL
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=sua_senha_mysql
+DB_NAME=gestao_financeira
+
+# Ambiente
+FLASK_ENV=development
+FLASK_DEBUG=True
 ```
 
 ### Passo 6: Execute a Aplicação
@@ -261,7 +278,14 @@ cp .env.example .env
 python app.py
 ```
 
-Acesse: `http://localhost:5000`
+Acesse: **http://localhost:5000**
+
+### 👤 Usuários de Teste
+
+| Email | Senha | Modo |
+|-------|-------|------|
+| maria@email.com | 123456 | Simples |
+| carlos@email.com | 123456 | Avançado |
 
 ---
 
@@ -274,6 +298,7 @@ Acesse: `http://localhost:5000`
 4. Preencha nome, email e senha
 
 ### 2️⃣ Adicionando Transações
+
 **Modo Simples:**
 - Clique no botão grande "Adicionar Movimentação"
 - Escolha se é RECEITA ou DESPESA
@@ -297,8 +322,8 @@ Acesse: `http://localhost:5000`
 4. Adicione valores conforme economizar
 
 ### 4️⃣ Exportando Dados
-- **Excel:** Menu Dashboard → Botão "Excel"
-- **PDF:** Menu Dashboard → Botão "PDF"
+- **Excel:** Menu Dashboard → Botão "Exportar Excel"
+- **PDF:** Menu Dashboard → Botão "Exportar PDF"
 
 ### 5️⃣ Alternando Modos
 1. Menu **"Configurações"**
@@ -311,11 +336,14 @@ Acesse: `http://localhost:5000`
 
 ### Executar Todos os Testes
 ```bash
-# Windows
-tests\executar_teste.bat
-
-# Linux/Mac
 python tests/test_app.py
+```
+
+### Com Relatório de Cobertura
+```bash
+coverage run -m unittest tests/test_app.py
+coverage report
+coverage html
 ```
 
 ### Cobertura de Testes
@@ -328,34 +356,67 @@ python tests/test_app.py
 | **Metas** | 2 | Cálculos, lógica de conclusão |
 | **Utilitários** | 2 | Funções auxiliares |
 | **Integração** | 2 | Fluxos completos end-to-end |
-| **TOTAL** | **15** | Taxa de sucesso: 100% |
+| **TOTAL** | **15** | Taxa de sucesso: **100%** ✅ |
 
 ### Exemplo de Saída
 ```
-🧪 EXECUTANDO SUITE DE TESTES - SISTEMA DE GESTÃO FINANCEIRA
-==================================================================
+======================================================================
+🧪 EXECUTANDO SUITE DE TESTES - GESTÃO FINANCEIRA
+======================================================================
 
 🧪 Executando TA-01: Hash de Senha...
-✅ TA-01: PASSOU - Hash de senha funcionando corretamente
+✅ TA-01: PASSOU
 
 🧪 Executando TA-02: Página de Login...
-✅ TA-02: PASSOU - Página de login acessível
+✅ TA-02: PASSOU
 
 [... 13 testes adicionais ...]
 
-==================================================================
-📊 RELATÓRIO FINAL DOS TESTES
-==================================================================
+======================================================================
+📊 RELATÓRIO FINAL
+======================================================================
 ✅ Testes executados: 15
 ✅ Sucessos: 15
 ❌ Falhas: 0
-⚠️ Erros: 0
+⚠️  Erros: 0
 📈 Taxa de Sucesso: 100.0%
 
 🎉 TODOS OS TESTES PASSARAM!
-✅ Sistema pronto para produção
-==================================================================
+======================================================================
 ```
+
+---
+
+## 📸 Capturas de Tela
+
+Todas as imagens do sistema estão disponíveis no Google Drive:
+
+**🔗 [Ver Todas as Screenshots](https://drive.google.com/drive/folders/1NfiauL8_0sB11r2Yt6rrVle8WJAxLFPK?usp=drive_link)**
+
+### Principais Telas
+
+- 🔐 **Tela de Login** - Interface de autenticação segura
+- 📊 **Dashboard Simples** - Interface clara e intuitiva para iniciantes
+- 📈 **Dashboard Avançado** - Gráficos e análises detalhadas
+- 🎯 **Metas Financeiras** - Acompanhamento visual de objetivos
+- 💸 **Adicionar Transação** - Formulário rápido de registro
+- 📊 **Relatórios** - Análises por categoria e evolução temporal
+- ⚙️ **Configurações** - Alternância entre modos de interface
+
+---
+
+## 🎥 Vídeos Demonstrativos
+
+Todos os vídeos estão disponíveis no Google Drive:
+
+**🔗 [Assistir Vídeos Completos](https://drive.google.com/drive/folders/1HtkiF-c2yeAppkmOtABNJ-BBmmPhVF6T?usp=drive_link)**
+
+### Conteúdo dos Vídeos
+
+- 🎬 **Pitch do Projeto (5 minutos)** - Apresentação completa do sistema
+- 🎬 **Demonstração Completa** - Passo a passo de todas as funcionalidades
+- 🧪 **Execução dos Testes** - 15 testes automatizados rodando com sucesso
+- 🎯 **Tutorial de Uso** - Como usar o sistema passo a passo
 
 ---
 
@@ -365,43 +426,50 @@ python tests/test_app.py
 
 | Métrica | Valor | Status |
 |---------|-------|--------|
-| **Linhas de Código** | ~1.500 | ✅ |
-| **Cobertura de Testes** | 85% | ✅ |
-| **Complexidade Ciclomática** | < 10 | ✅ |
-| **Duplicação de Código** | < 5% | ✅ |
-| **Comentários/Documentação** | 20% | ✅ |
+| **Linhas de Código** | ~1.900 | ✅ |
+| **Cobertura de Testes** | ~85% | ✅ |
+| **Complexidade Ciclomática** | 3.2 (Baixa) | ✅ |
+| **Testes Aprovados** | 15/15 (100%) | ✅ |
+| **Bugs Críticos** | 0 | ✅ |
+
+### Estimativas de Esforço
+
+#### Pontos de Função (PF)
+
+| Funcionalidade | Tipo | Complexidade | PF |
+|----------------|------|--------------|-----|
+| Autenticação | EI | Baixa | 3 |
+| CRUD Transações | EI | Média | 4 |
+| Dashboard | EO | Alta | 6 |
+| Metas Financeiras | EI | Média | 4 |
+| Relatórios | EO | Alta | 6 |
+| Exportação | EO | Média | 4 |
+| **TOTAL** | | | **27** |
+
+**Estimativa de Esforço:**
+- Produtividade: 5 horas/PF
+- Esforço Estimado: 135 horas
+- Esforço Real: 140 horas
+- Variação: +3.7% ✅
 
 ### Boas Práticas Aplicadas
+
 ✅ **Clean Code:** Nomes descritivos, funções pequenas  
-✅ **DRY:** Código reutilizável  
+✅ **DRY:** Código reutilizável, sem duplicação  
 ✅ **SOLID:** Separação de responsabilidades  
 ✅ **Segurança:** Hashing de senhas, validação de inputs  
-✅ **Responsividade:** Design mobile-first  
-
-### Análise Estática
-```bash
-# Instalar ferramenta
-pip install pylint
-
-# Executar análise
-pylint app.py
-```
-
-### Diretrizes
-- Escreva testes para novas funcionalidades
-- Mantenha a cobertura acima de 80%
-- Siga o padrão PEP 8 (Python)
-- Documente funções complexas
+✅ **Testes:** Cobertura alta com cenários positivos e negativos  
+✅ **Documentação:** README completo, comentários no código  
 
 ---
 
 ## 🗺️ Roadmap
 
-### Versão 2.0 (Próximos 6 meses)
+### Versão 2.0 (Planejado)
 - [ ] Modo escuro automático
-- [ ] Integração com bancos (Open Banking)
 - [ ] Aplicativo mobile (React Native)
 - [ ] Notificações push
+- [ ] Importação de extratos bancários
 
 ### Versão 3.0 (Futuro)
 - [ ] Inteligência Artificial para sugestões
@@ -411,26 +479,30 @@ pylint app.py
 
 ---
 
-## 👥 Autores
+## 👥 Equipe
 
-| Nome                               | RA          |
-|------------------------------------|-------------|
-| Janary Victor do Nascimento Júnior | 1362416604  |
-| José Kleivson da Silva Freitas     | 1362411072  |
-| Daniel Obede da Silva              | 1362112473  |
+### Desenvolvedores
 
+| Nome | RA | Função |
+|------|-----|--------|
+| **Janary Victor do Nascimento Júnior** | 1362416604 | Desenvolvedor Full-Stack |
+| **José Kleivson da Silva Freitas** | 1362411072 | Banco de Dados / Backend |
+| **Daniel Obede da Silva** | 1362112473 | Frontend / Testes |
 
+### Informações Acadêmicas
 
 **Orientador:** Prof. Welber Macedo  
-**Instituição:** Universidade FPB / Tambiá 
+**Instituição:** Faculdade Internacional da Paraíba (FPB) - Campus Tambiá  
+**Curso:** Análise e Desenvolvimento de Sistemas  
 **Disciplina:** Gestão e Qualidade de Software (A3)  
-**Semestre:** 2025.2
+**Semestre:** 2025.2  
+**Data:** Novembro/2025  
 
 ---
 
 ## 📄 Licença
 
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+Este projeto foi desenvolvido para fins acadêmicos na disciplina de Gestão e Qualidade de Software.
 
 ---
 
@@ -438,14 +510,32 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 
 - [Flask](https://flask.palletsprojects.com/) - Framework web
 - [Bootstrap](https://getbootstrap.com/) - Framework CSS
-- [Chart.js](https://www.chartjs.org/) - Biblioteca de gráficos
+- [MySQL](https://www.mysql.com/) - Sistema de banco de dados
 - [Font Awesome](https://fontawesome.com/) - Ícones
-- Todos os contribuidores do projeto
+- Prof. Welber Macedo - Orientação e suporte
+- FPB - Infraestrutura e recursos
+
+---
+
+## 📞 Contato
+
+- 📧 **Email:** [Inserir email da equipe]
+- 🐙 **GitHub:** [@Jana-bongo](https://github.com/Jana-bongo)
+- 🔗 **LinkedIn:** [Inserir perfis se houver]
+
+---
 
 <div align="center">
 
-**⭐ Se este projeto te ajudou, deixe uma estrela!**
+**⭐ Se este projeto te ajudou, deixe uma estrela no GitHub!**
 
-Made with ❤️ for A3 - Gestão e Qualidade de Software
+![GitHub stars](https://img.shields.io/github/stars/Jana-bongo/Simplifica-Finan-as?style=social)
+![GitHub forks](https://img.shields.io/github/forks/Jana-bongo/Simplifica-Finan-as?style=social)
+
+---
+
+**Desenvolvido com ❤️ para a A3 de Gestão e Qualidade de Software**
+
+[⬆ Voltar ao topo](#-sistema-de-gestão-financeira---simplifica-finanças)
 
 </div>
