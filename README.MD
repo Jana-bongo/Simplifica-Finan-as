@@ -496,7 +496,6 @@ Todos os vídeos estão disponíveis no Google Drive:
 **Curso:** Análise e Desenvolvimento de Sistemas  
 **Disciplina:** Gestão e Qualidade de Software (A3)  
 **Semestre:** 2025.2  
-**Data:** Novembro/2025  
 
 ---
 
